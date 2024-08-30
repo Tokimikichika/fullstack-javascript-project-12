@@ -1,4 +1,5 @@
 install:
+	npm cache clean --force
 	npm install
 	cd frontend && npm install
 
