@@ -5,7 +5,7 @@ install:
 build:
 	npm cache clean --force
 	rm -rf frontend/build
-	cd frontend && npm run build
+	cd frontend && npm ci && npm run build
 	
 deploy:
 	git push heroku main
