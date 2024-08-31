@@ -3,6 +3,7 @@ install:
 	cd frontend && npm install
 
 build:
+	npm cache clean --force
 	rm -rf frontend/build
 	cd frontend && npm run build
 	
