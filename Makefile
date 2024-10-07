@@ -1,16 +1,18 @@
 install:
-	git submodule update --init --recursive
 	npm ci
-	cd frontend && npm install
 
-build:
-	npm cache clean --force
-	git submodule update --init --recursive
-	rm -rf frontend/build
-	cd frontend && npm run build
-	
-deploy:
-	git push heroku main
+start-frontend:
+	make -C frontend start
+
+start-backend:
+	npm start
 
 start:
-	npx @hexlet/chat-server -s ./frontend/build
+	make start-backend
+
+local-start:
+	make start-backend & make start-frontend
+
+build:
+	rm frontend/build -rf
+	npm run build
