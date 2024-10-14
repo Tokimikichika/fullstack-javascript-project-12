@@ -15,4 +15,5 @@ local-start:
 
 build:
 	rm frontend/build -rf
+	npm install --prefix frontend
 	npm run build
