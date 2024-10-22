@@ -1,4 +1,4 @@
-import ru from './i18n';
+import ru from './localization';
 
 export default {
   ru,

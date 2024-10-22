@@ -59,11 +59,6 @@ const init = async (socket) => {
     }));
   });
 
-  // const rollbarConfig = {
-  //   accessToken: '56867251a44a46c6aa21e41e7d732359',
-  //   environment: 'testenv',
-  // };
-
   return (
     <I18nextProvider i18n={i18n}>
       <Provider store={store}>

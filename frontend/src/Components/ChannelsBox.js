@@ -5,6 +5,7 @@ import { Button, Dropdown, ButtonGroup } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { useGetChannels } from '../service/channelsApi';
 import { actions } from '../slices/index.js';
+import getCurrentChannelId from './selectors.js';
 
 const Channel = ({
   channel,
@@ -59,7 +60,7 @@ const ChannelsBox = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const { data: channels } = useGetChannels();
-  const currentChannelId = useSelector((state) => state.ui.currentChannelId);
+  const currentChannelId = useSelector(getCurrentChannelId);
 
   const handleChooseChannel = (channelId) => {
     dispatch(actions.setCurrentChannel({ channelId }));
