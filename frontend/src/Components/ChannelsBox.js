@@ -5,7 +5,7 @@ import { Button, Dropdown, ButtonGroup } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 import { useGetChannels } from '../service/channelsApi';
 import { actions } from '../slices/index.js';
-import getCurrentChannelId from './selectors.js';
+import { getCurrentChannelId } from './selectors.js';
 
 const Channel = ({
   channel,
