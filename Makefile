@@ -1,8 +1,13 @@
 install:
 	npm ci
 
+build-frontend:
+	rm -rf frontend/build
+	npm install --prefix frontend
+	cd frontend && npx webpack --config webpack.config.js --mode production
+
 start-frontend:
-	make -C frontend start
+	npx webpack serve --config frontend/webpack.config.js --mode development
 
 start-backend:
 	npm start
@@ -14,6 +19,4 @@ local-start:
 	make start-backend & make start-frontend
 
 build:
-	rm frontend/build -rf
-	npm install --prefix frontend
-	npm run build
+	make build-frontend

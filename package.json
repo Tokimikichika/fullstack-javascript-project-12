@@ -13,5 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "@hexlet/chat-server": "^2.0.4"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
