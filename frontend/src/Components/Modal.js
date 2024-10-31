@@ -10,7 +10,6 @@ import { useFormik } from 'formik';
 import * as yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
-import { createSelector } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
 import leoProfanity from 'leo-profanity';
 import { actions } from '../slices/index.js';
@@ -20,7 +19,6 @@ import {
   useDeleteChannel,
   useGetChannels,
 } from '../service/channelsApi.js';
-import { getChannelId, getIsModalOpened, getModalType } from './selectors';
 
 const getValidationSchema = (channels) => yup.object().shape({
   name: yup
@@ -32,13 +30,9 @@ const getValidationSchema = (channels) => yup.object().shape({
     .notOneOf(channels, 'modals.uniq'),
 });
 
-const selectChannelNames = createSelector(
-  (state) => state.channels,
-  (channels) => channels.map(({ name }) => name),
-);
-
 const AddChannelForm = ({ handleClose }) => {
-  const channelNames = useSelector(selectChannelNames);
+  const { data: channels } = useGetChannels(undefined);
+  const channelNames = channels.map(({ name }) => name);
   const inputRef = useRef(null);
   const [
     addChannel,
@@ -179,8 +173,8 @@ const RemoveChannelForm = ({ handleClose }) => {
 const RenameChannelForm = ({ handleClose }) => {
   const { t } = useTranslation();
   const { data: channels } = useGetChannels(undefined);
-  const channelNames = useSelector(selectChannelNames);
-  const channelId = useSelector(getChannelId);
+  const channelNames = channels.map(({ name }) => name);
+  const channelId = useSelector((state) => state.ui.modal.extra?.channelId);
   const channel = channels.find(({ id }) => channelId === id);
   const inputRef = useRef(null);
   const [
@@ -269,12 +263,12 @@ const mapping = {
 
 const Modal = () => {
   const dispatch = useDispatch();
-  const isOpened = useSelector(getIsModalOpened);
-  const modalType = useSelector(getModalType);
+  const isOpened = useSelector((state) => state.ui.modal.isOpened);
 
   const handleClose = () => {
     dispatch(actions.closeModal());
   };
+  const modalType = useSelector((state) => state.ui.modal.type);
 
   const Component = mapping[modalType];
 
