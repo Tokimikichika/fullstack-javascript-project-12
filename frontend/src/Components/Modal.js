@@ -19,6 +19,12 @@ import {
   useDeleteChannel,
   useGetChannels,
 } from '../service/channelsApi.js';
+import {
+  selectModalIsOpened,
+  selectModalType,
+  selectChannelId,
+} from './selectors.js';
+
 
 const getValidationSchema = (channels) => yup.object().shape({
   name: yup
@@ -123,7 +129,7 @@ const RemoveChannelForm = ({ handleClose }) => {
     deleteChannel,
     { error, isLoading }, // eslint-disable-line
   ] = useDeleteChannel();
-  const channelId = useSelector((state) => state.ui.modal.extra?.channelId);
+  const channelId = useSelector(selectChannelId);
   const handleRemove = async () => {
     setLoading(true);
     deleteChannel(channelId);
@@ -174,7 +180,7 @@ const RenameChannelForm = ({ handleClose }) => {
   const { t } = useTranslation();
   const { data: channels } = useGetChannels(undefined);
   const channelNames = channels.map(({ name }) => name);
-  const channelId = useSelector((state) => state.ui.modal.extra?.channelId);
+  const channelId = useSelector(selectChannelId);
   const channel = channels.find(({ id }) => channelId === id);
   const inputRef = useRef(null);
   const [
@@ -263,12 +269,12 @@ const mapping = {
 
 const Modal = () => {
   const dispatch = useDispatch();
-  const isOpened = useSelector((state) => state.ui.modal.isOpened);
+  const isOpened = useSelector(selectModalIsOpened);
 
   const handleClose = () => {
     dispatch(actions.closeModal());
   };
-  const modalType = useSelector((state) => state.ui.modal.type);
+  const modalType = useSelector(selectModalType);
 
   const Component = mapping[modalType];
 
