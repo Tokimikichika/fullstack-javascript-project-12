@@ -7,7 +7,7 @@ build-frontend:
 	cd frontend && npx webpack --config webpack.config.js --mode production
 
 start-frontend:
-	npx webpack serve --config frontend/webpack.config.js --mode development
+	cd frontend && npx webpack serve --config webpack.config.js --mode development
 
 start-backend:
 	npm start
