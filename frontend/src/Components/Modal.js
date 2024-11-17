@@ -25,7 +25,6 @@ import {
   selectChannelId,
 } from './selectors.js';
 
-
 const getValidationSchema = (channels) => yup.object().shape({
   name: yup
     .string()
