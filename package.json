@@ -6,12 +6,16 @@
   "scripts": {
     "build": "npm run build --prefix frontend",
     "start": "start-server -s ./frontend/build",
-    "postinstall": "cd frontend && npm ci"
+    "postinstall": "cd frontend && npm ci",
+    "deploy": "npm run build && gh-pages -d frontend/build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@hexlet/chat-server": "^2.0.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }

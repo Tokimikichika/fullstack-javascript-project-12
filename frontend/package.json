@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://fullstack-javascript-project-12-1.onrender.com",
+  "homepage": "https://tokimikichika.github.io/fullstack-javascript-project-12",
   "private": true,
   "proxy": "http://localhost:5001",
   "dependencies": {
