@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.f029a054.css",
-    "main.js": "/static/js/main.576ae320.js",
-    "static/media/notFound.jpg": "/static/media/notFound.6ae9bef72fd854ec2be7.jpg",
-    "static/media/avatar_1.jpg": "/static/media/avatar_1.6084447160acc893a24d.jpg",
-    "index.html": "/index.html",
-    "main.f029a054.css.map": "/static/css/main.f029a054.css.map",
-    "main.576ae320.js.map": "/static/js/main.576ae320.js.map"
+    "main.css": "/fullstack-javascript-project-12/static/css/main.f029a054.css",
+    "main.js": "/fullstack-javascript-project-12/static/js/main.e27d13ab.js",
+    "static/media/notFound.jpg": "/fullstack-javascript-project-12/static/media/notFound.6ae9bef72fd854ec2be7.jpg",
+    "static/media/avatar_1.jpg": "/fullstack-javascript-project-12/static/media/avatar_1.6084447160acc893a24d.jpg",
+    "index.html": "/fullstack-javascript-project-12/index.html",
+    "main.f029a054.css.map": "/fullstack-javascript-project-12/static/css/main.f029a054.css.map",
+    "main.e27d13ab.js.map": "/fullstack-javascript-project-12/static/js/main.e27d13ab.js.map"
   },
   "entrypoints": [
     "static/css/main.f029a054.css",
-    "static/js/main.576ae320.js"
+    "static/js/main.e27d13ab.js"
   ]
 }
