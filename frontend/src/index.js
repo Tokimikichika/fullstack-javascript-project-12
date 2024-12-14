@@ -5,7 +5,7 @@ import init from './init.jsx';
 
 const app = async () => {
   const root = ReactDOM.createRoot(document.querySelector('#chat'));
-  const socket = io('http://localhost:5001');
+  const socket = io();
   const vdom = await init(socket);
   root.render(<React.StrictMode>{vdom}</React.StrictMode>);
 };

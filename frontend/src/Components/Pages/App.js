@@ -22,7 +22,7 @@ const PrivateOutlet = () => {
 
 // Основное приложение
 const App = () => (
-  <BrowserRouter basename="/fullstack-javascript-project-12">
+  <BrowserRouter>
     <div className="d-flex flex-column h-100">
       <Navbar />
       <Routes>
