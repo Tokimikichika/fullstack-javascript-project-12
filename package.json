@@ -6,8 +6,7 @@
   "scripts": {
     "build": "npm run build --prefix frontend",
     "start": "start-server -s ./frontend/build",
-    "postinstall": "cd frontend && npm ci",
-    "deploy": "npm run build && gh-pages -d frontend/build"
+    "postinstall": "cd frontend && npm ci"
   },
   "keywords": [],
   "author": "",

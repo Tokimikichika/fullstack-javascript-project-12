@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { PlusSquare } from 'react-bootstrap-icons';
 import { Button, Dropdown, ButtonGroup } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
-import { useGetChannels } from '../service/channelsApi';
+import { useGetChannels } from '../service/channelsApi.js';
 import { actions } from '../slices/index.js';
 import { getCurrentChannelId } from './selectors.js';
 
