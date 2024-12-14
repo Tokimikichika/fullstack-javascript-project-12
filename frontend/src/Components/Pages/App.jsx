@@ -6,12 +6,12 @@ import {
   Outlet,
 } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import Login from './Login.js';
-import ChatPage from './Chat.js';
+import Login from './Login.jsx';
+import ChatPage from './Chat.jsx';
 import routes from '../../routes.js';
-import NotFoundPage from './NotFound.js';
-import Navbar from './Navbar.js';
-import Signup from './Signup.js';
+import NotFoundPage from './NotFound.jsx';
+import Navbar from './Navbar.jsx';
+import Signup from './Signup.jsx';
 import 'react-toastify/dist/ReactToastify.css';
 
 // Приватный роутер

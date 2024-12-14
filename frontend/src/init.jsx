@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { ToastContainer } from 'react-toastify';
 import leoProfanity from 'leo-profanity';
-import App from './Components/Pages/App.js';
+import App from './Components/Pages/App.jsx';
 import resources from './I18/index.js';
 import reducer, { actions } from './slices/index.js';
 import { channelsApi } from './service/channelsApi.js';
