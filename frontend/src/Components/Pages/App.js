@@ -14,13 +14,15 @@ import Navbar from './Navbar.js';
 import Signup from './Signup.js';
 import 'react-toastify/dist/ReactToastify.css';
 
+// Приватный роутер
 const PrivateOutlet = () => {
   const auth = useSelector((state) => state.auth);
   return auth.token ? <Outlet /> : <Navigate to={routes.loginPagePath()} />;
 };
 
+// Основное приложение
 const App = () => (
-  <BrowserRouter basename="/fullstack-javascript-project-12">
+  <BrowserRouter>
     <div className="d-flex flex-column h-100">
       <Navbar />
       <Routes>
