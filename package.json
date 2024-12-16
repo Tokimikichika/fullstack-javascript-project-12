@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build --prefix frontend",
-    "start-backend": "npx start-server -s ./frontend/build",
+    "start-backend": "start-server -s ./frontend/build",
     "start-frontend": "npm start --prefix frontend",
     "start": "npm run start-backend",
     "local-start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
