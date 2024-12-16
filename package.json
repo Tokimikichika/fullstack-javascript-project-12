@@ -5,14 +5,19 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build --prefix frontend",
-    "start": "start-server -s ./frontend/build",
+    "start-backend": "start-server -s ./frontend/build",
+    "start-frontend": "npm start --prefix frontend",
+    "start": "npm run start-backend",
+    "local-start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
     "postinstall": "cd frontend && npm ci"
-  },
+  }
+  ,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hexlet/chat-server": "^2.0.4"
+    "@hexlet/chat-server": "^2.0.4",
+    "serve": "^14.2.4"
   },
   "devDependencies": {
     "gh-pages": "^6.2.0"
