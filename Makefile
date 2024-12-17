@@ -5,7 +5,7 @@ start-frontend:
 	make -C frontend start
 
 start-backend:
-	npm start
+	npx start-server -s ./frontend/build
 
 start:
 	make start-backend

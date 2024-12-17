@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build --prefix frontend",
-    "start-backend": "start-server -s ./frontend/build",
+    "start-backend": "npx start-server -s ./frontend/build",
     "start-frontend": "npm start --prefix frontend",
     "start": "npm run start-backend",
     "local-start": "concurrently \"npm run start-backend\" \"npm run start-frontend\"",
     "postinstall": "cd frontend && npm ci"
-  }
-  ,
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -20,6 +19,7 @@
     "serve": "^14.2.4"
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.2.0",
+    "start-server-and-test": "^2.0.9"
   }
 }
