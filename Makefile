@@ -8,10 +8,10 @@ start-backend:
 	npx start-server -s ./frontend/build -p 5000
 
 start:
-	make start-backend
+	npx start-server -s ./frontend/build -p $PORT
 
 local-start:
-	make start-backend & make start-frontend
+	make start
 
 build:
 	rm frontend/build -rf
