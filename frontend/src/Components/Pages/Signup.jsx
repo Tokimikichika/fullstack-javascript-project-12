@@ -55,7 +55,7 @@ const Registration = () => {
           routes.signupPath(),
           { username: values.username, password: values.password },
         );
-        dispatch(actions.login(res.data));
+        dispatch(actions.setCredentials(res.data));
         navigate(routes.chatPagePath());
       } catch (err) {
         // rollbar.error(err);

@@ -2,12 +2,11 @@
 
 const apiPath = '/api/v1';
 
-const routes = {
+export default {
   loginPath: () => [apiPath, 'login'].join('/'),
   signupPath: () => [apiPath, 'signup'].join('/'),
-  chatPagePath: () => '/',
+  dataPath: () => [apiPath, 'data'].join('/'),
   loginPagePath: () => '/login',
   signupPagePath: () => '/signup',
+  chatPagePath: () => '/chat',
 };
-
-export default routes;
