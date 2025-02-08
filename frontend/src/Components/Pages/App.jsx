@@ -26,9 +26,8 @@ const App = () => (
     <div className="d-flex flex-column h-100">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
-        <Route path={routes.signupPagePath()} element={<Signup />} />
         <Route path={routes.loginPagePath()} element={<Login />} />
+        <Route path={routes.signupPagePath()} element={<Signup />} />
         <Route path={routes.chatPagePath()} element={<PrivateOutlet />}>
           <Route path="" element={<ChatPage />} />
         </Route>

@@ -8,5 +8,5 @@ export default {
   dataPath: () => [apiPath, 'data'].join('/'),
   loginPagePath: () => '/login',
   signupPagePath: () => '/signup',
-  chatPagePath: () => '/chat',
+  chatPagePath: () => '/',
 };
