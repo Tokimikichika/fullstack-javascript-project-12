@@ -8,7 +8,7 @@ start-backend:
 	npx start-server -s ./frontend/build -p 5000
 
 start:
-	npx start-server -s ./frontend/build -p $PORT
+	PORT=5000 npx start-server -s ./frontend/build
 
 local-start:
 	make start

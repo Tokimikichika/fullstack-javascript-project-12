@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build --prefix frontend",
-    "start": "start-server -s ./frontend/build -p $PORT",
-    "start-backend": "npx start-server -s ./frontend/build -p 5000",
+    "start": "PORT=5000 start-server -s ./frontend/build",
+    "start-backend": "PORT=5000 npx start-server -s ./frontend/build -p 5000",
     "start-frontend": "npm start --prefix frontend",
     "local-start": "make start-backend",
     "postinstall": "cd frontend && npm install"
