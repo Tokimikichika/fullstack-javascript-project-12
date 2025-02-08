@@ -5,13 +5,13 @@ start-frontend:
 	make -C frontend start
 
 start-backend:
-	npx start-server -s ./frontend/build -p 5000
+	npx start-server -s ./frontend/build
 
 start:
-	PORT=5000 npx start-server -s ./frontend/build
+	make start-backend
 
 local-start:
-	make start
+	make start-backend & make start-frontend
 
 build:
 	rm frontend/build -rf

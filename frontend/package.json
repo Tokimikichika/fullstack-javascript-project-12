@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "http://localhost:5001",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.8",
     "@rollbar/react": "^0.12.0-beta",
@@ -44,7 +44,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.0-placeholder-for-preset-env.2",
     "eslint": "^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-functional": "^4.2.2",
